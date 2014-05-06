@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.djpetersen.bluetoothgamepad.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonDown"
+        android:layout_alignParentRight="true"
+        android:text="@string/c_b"
+        />
+
+    <Button
+        android:id="@+id/buttonLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="@string/c_left" />
+
+    <Button
+        android:id="@+id/buttonDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonLeft"
+        android:layout_toRightOf="@+id/buttonLeft"
+        android:text="@string/c_down" />
+
+    <Button
+        android:id="@+id/buttonRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonDown"
+        android:layout_toRightOf="@+id/buttonDown"
+        android:text="@string/c_right" />
+
+    <Button
+        android:id="@+id/buttonUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonRight"
+        android:layout_alignRight="@+id/buttonDown"
+        android:text="@string/c_up" />
+
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonDown"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@+id/buttonB"
+        android:text="@string/c_a" />
+
+    <Button
+        android:id="@+id/buttonEx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/buttonConnect"
+        android:text="@string/bt_ex" 
+        android:onClick="pressEx"
+        />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/editText1"
+        android:onClick="pressSend"
+        android:text="@string/buttonSend" />
+
+    <Button
+        android:id="@+id/buttonConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/buttonA"
+        android:layout_marginRight="8dp"
+        android:text="@string/bt_connect" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/state"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonDown"
+        android:layout_alignLeft="@+id/buttonSend"
+        android:layout_marginLeft="30dp"
+        android:text="@string/buttonStart" />
+
+    <Button
+        android:id="@+id/buttonSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonDown"
+        android:layout_marginRight="13dp"
+        android:layout_toLeftOf="@+id/buttonConnect"
+        android:text="@string/buttonSelect" />
+
+    <Button
+        android:id="@+id/buttonKill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonDown"
+        android:onClick="pressKill"
+        android:text="@string/killButton" />
+
+    <Button
+        android:id="@+id/buttonDEATH"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonKill"
+        android:layout_toLeftOf="@+id/buttonKill"
+        android:onClick="pressDeath"
+        android:text="@string/death" />
+
+</RelativeLayout>
